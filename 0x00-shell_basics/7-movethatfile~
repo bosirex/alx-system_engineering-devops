@@ -1,0 +1,3 @@
+#!/bin/bash
+mv /tmp/be
+tty /tmp/my_m
