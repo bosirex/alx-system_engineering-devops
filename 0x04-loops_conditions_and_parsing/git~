@@ -1,0 +1,4 @@
+#!/bin bash
+git add .
+git commit -m"loops_conditions_and_parsing"
+git push
