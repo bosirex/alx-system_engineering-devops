@@ -5,32 +5,7 @@ sudo apt-get update
 sudo apt-get install -y nginx
 
 #creating index page
-echo "Hello World!" | sudo tee /var/www/html/index.html
-
-#redirection
-replacement_string="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;"
-
-sudo sed -i "s/server_name _;/$replacement_string/" /etc/nginx/sites-available/default
-
-# creating a 404 error page
-
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
-
-# http response header
-sudo sed -i "/server_name _/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default
-
-#testing syntax error
-sudo nginx -t
-
-#restart service
-sudo service nginx restart#!/usr/bin/env bash
-# web-01 configuration
-
-sudo apt-get update
-sudo apt-get install -y nginx
-
-#creating index page
-echo "Hello World!" | sudo tee /var/www/html/index.html
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
 
 #redirection
 replacement_string="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;"
