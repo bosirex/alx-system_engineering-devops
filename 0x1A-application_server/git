@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m"application_server"
+git push
